@@ -5,6 +5,7 @@ This micro-project connects to a live MTConnect data stream and builds a real-ti
 - Plots live time-series charts of selected numeric signals (e.g., spindle speed, axis positions)
 - Displays real-time status indicators for execution state, availability, and emergency stop
 - Demonstrates how to combine MTConnect with Dash, Plotly, and pandas in a production-friendly Python workflow
+
 As anything, it's a work in progress.
 
 ### Technologies
