@@ -12,6 +12,20 @@ Evaluation will be based on the following metrics:
 
 This setup measures how effectively the pipeline proposes candidate objects, filters via visual review, and assigns meaningful labels, particularly in low-supervision or novel class scenarios. 
 
+## WARNING
+This pipeline is designed to run efficiently on systems with the following:
+- GPU with CUDA support (e.g. NVIDIA RTX 20XX or higher)
+  
+  _Used for CLIP feature extraction and YOLOv8 inference._
+- Minimum 16 GB RAM
+  
+  _Recommended for handling image batches and candidate crops._
+- Sufficient disk space
+  
+  _Expect temporary storage of cropped images, embeddings, and label fiels._
+
+Running on CPU is possible but significantly slower and may result in out-of-memory errors during CLIP inference. 
+
 ## Pipeline Overview
 
 ```mermaid
