@@ -4,7 +4,7 @@ This repository contains a modular pipeline for generating and validating pseudo
 
 Validation will be performed on standard benchmark datasets (e.g. Pascal VOC or COCO), using a subset of images held out from training. To simulate pseudo-labeling on unfamiliar objects, all previously learned weights for object categories will be frozen, minimizing inherited model knowledge and approximating the performance on truly unlabled or novel classes. 
 
-Evaluation is based on the following metrics:
+Evaluation will be based on the following metrics:
 - mAP@IoU thresholds
 - Precision
 - Recall
