@@ -1,5 +1,7 @@
 # 01_mtconnect_parser
 
+**Project ammended from python to node-red for ease of use and encouragement of no more dashboard projects!
+
 This micro-project connects to a live MTConnect data stream and builds a real-time dashboard that:
 - Parses and logs machine state data
 - Plots live time-series charts of selected numeric signals (e.g., spindle speed, axis positions)
@@ -13,6 +15,7 @@ As anything, it's a work in progress.
 - MTConnect (simulated /current stream)
 - Dash (UI), Plotly (charts), pandas (data structuring)
 - Live polling with threading
+- node-red
 
 ### Run it
 ```bash
