@@ -1,0 +1,486 @@
+[
+    {
+        "id": "bce92653e2452949",
+        "type": "tab",
+        "label": "MTCONNECT PULL",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "tab_1",
+        "type": "tab",
+        "label": "Factory Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ui_tab_1",
+        "type": "ui_tab",
+        "name": "Factory Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "group_okuma",
+        "type": "ui_group",
+        "z": "tab_1",
+        "name": "OKUMA",
+        "tab": "ui_tab_1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "group_mazak",
+        "type": "ui_group",
+        "z": "tab_1",
+        "name": "Mazak",
+        "tab": "ui_tab_1",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "group_agent",
+        "type": "ui_group",
+        "z": "tab_1",
+        "name": "Agent Status",
+        "tab": "ui_tab_1",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d437f1409de5fb54",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6bf9b73682505592",
+        "type": "inject",
+        "z": "bce92653e2452949",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "2a0bcef2f3a38f63"
+            ]
+        ]
+    },
+    {
+        "id": "2a0bcef2f3a38f63",
+        "type": "http request",
+        "z": "bce92653e2452949",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://demo.mtconnect.org/sample",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "d0645ab8ca5eaf2f"
+            ]
+        ]
+    },
+    {
+        "id": "c9c64b46f2292f68",
+        "type": "debug",
+        "z": "bce92653e2452949",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 620,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d0645ab8ca5eaf2f",
+        "type": "xml",
+        "z": "bce92653e2452949",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "5b526ea75830d227"
+            ]
+        ]
+    },
+    {
+        "id": "5b526ea75830d227",
+        "type": "function",
+        "z": "bce92653e2452949",
+        "name": "function 1",
+        "func": "let output = {};\n\ntry {\n    const streamsRoot = msg.payload?.MTConnectStreams?.Streams?.[0];\n    const deviceStreams = streamsRoot?.DeviceStream;\n\n    if (!Array.isArray(deviceStreams)) {\n        msg.payload = \"DeviceStream is not an array or missing\";\n        return msg;\n    }\n\n    for (let device of deviceStreams) {\n        let deviceName = device.$?.name || \"UnnamedDevice\";\n        output[deviceName] = {};\n\n        for (let comp of device.ComponentStream || []) {\n            let compName = comp.$?.name || comp.$?.component || \"UnknownComponent\";\n\n            if (comp.Samples?.[0]) {\n                for (let type in comp.Samples[0]) {\n                    const sampleArray = comp.Samples[0][type];\n                    if (Array.isArray(sampleArray)) {\n                        const latest = sampleArray[sampleArray.length - 1];\n                        output[deviceName][type] = {\n                            value: latest._ || null,\n                            timestamp: latest.$?.timestamp || null,\n                            dataItemId: latest.$?.dataItemId || null\n                        };\n                    }\n                }\n            }\n\n            if (comp.Events?.[0]) {\n                for (let type in comp.Events[0]) {\n                    const eventArray = comp.Events[0][type];\n                    if (Array.isArray(eventArray)) {\n                        const latest = eventArray[eventArray.length - 1];\n                        output[deviceName][type] = {\n                            value: latest._ || null,\n                            timestamp: latest.$?.timestamp || null,\n                            dataItemId: latest.$?.dataItemId || null\n                        };\n                    }\n                }\n            }\n        }\n    }\n\n    msg.payload = output;\n    return msg;\n\n} catch (err) {\n    msg.payload = `Parsing error: ${err.message}`;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "c9c64b46f2292f68",
+                "91124b2617dc70be"
+            ]
+        ]
+    },
+    {
+        "id": "91124b2617dc70be",
+        "type": "link out",
+        "z": "bce92653e2452949",
+        "name": "Send to Dashboard",
+        "mode": "link",
+        "links": [
+            "11173ffb153b05d1"
+        ],
+        "x": 635,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "inject_okuma",
+        "type": "inject",
+        "z": "tab_1",
+        "name": "Trigger OKUMA Feedrate",
+        "props": [],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "func_okuma"
+            ]
+        ]
+    },
+    {
+        "id": "func_okuma",
+        "type": "function",
+        "z": "tab_1",
+        "name": "OKUMA Path Position",
+        "func": "let raw = msg.payload?.OKUMA?.PathPosition?.value || \"0 0 0\";\nlet parts = raw.split(\" \");\nmsg.payload = {\n    x: Number(parts[0]) || 0,\n    y: Number(parts[1]) || 0,\n    z: Number(parts[2]) || 0\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 100,
+        "wires": [
+            [
+                "gauge_okuma"
+            ]
+        ]
+    },
+    {
+        "id": "gauge_okuma",
+        "type": "ui_gauge",
+        "z": "tab_1",
+        "name": "",
+        "group": "group_okuma",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "gtype": "gage",
+        "title": "OKUMA Path Position",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 8000,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "inject_mazak",
+        "type": "inject",
+        "z": "tab_1",
+        "name": "Trigger Mazak Spindle RPM",
+        "props": [],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "func_mazak"
+            ]
+        ]
+    },
+    {
+        "id": "func_mazak",
+        "type": "function",
+        "z": "tab_1",
+        "name": "Mazak Spindle RPM Extract",
+        "func": "msg.payload = Number(msg.payload?.Mazak?.Angle?.AngularVelocity?.value || 0);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 240,
+        "wires": [
+            [
+                "gauge_mazak"
+            ]
+        ]
+    },
+    {
+        "id": "gauge_mazak",
+        "type": "ui_gauge",
+        "z": "tab_1",
+        "name": "",
+        "group": "group_mazak",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Mazak Spindle RPM",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 8000,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "inject_agent",
+        "type": "inject",
+        "z": "tab_1",
+        "name": "Trigger Agent Update Rate",
+        "props": [],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "func_agent"
+            ]
+        ]
+    },
+    {
+        "id": "func_agent",
+        "type": "function",
+        "z": "tab_1",
+        "name": "Agent Update Rate Extract",
+        "func": "msg.payload = Number(msg.payload?.Agent?.ObservationUpdateRate?.value || 0);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 340,
+        "wires": [
+            [
+                "gauge_agent"
+            ]
+        ]
+    },
+    {
+        "id": "gauge_agent",
+        "type": "ui_gauge",
+        "z": "tab_1",
+        "name": "",
+        "group": "group_agent",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Agent Update Rate",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 8000,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 950,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "11173ffb153b05d1",
+        "type": "link in",
+        "z": "tab_1",
+        "name": "From MTConnect Parser",
+        "links": [
+            "91124b2617dc70be"
+        ],
+        "x": 85,
+        "y": 220,
+        "wires": [
+            [
+                "func_okuma",
+                "func_mazak",
+                "func_agent"
+            ]
+        ]
+    }
+]
