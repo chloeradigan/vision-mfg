@@ -26,6 +26,10 @@ This pipeline is designed to run efficiently on systems with the following:
 
 Running on CPU is possible but significantly slower and may result in out-of-memory errors during CLIP inference. 
 
+## Project Notes
+This is an early-stage pipeline and is currently structured as a set of modular scripts for transparency and testing. Admittedly, the overall setup is hefty, and future versions will consolidate tasks into callable functions and streamlined workflows to improve maintainability and scalability. 
+
+
 ## Pipeline Overview
 
 ```mermaid
