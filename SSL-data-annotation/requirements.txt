@@ -1,0 +1,11 @@
+Pillow
+json
+open_clip_torch
+opencv-python
+os
+pillow-heif
+shutil
+torch
+torchvision
+tqdm
+ultralytics
