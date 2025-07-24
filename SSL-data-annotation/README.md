@@ -1,6 +1,16 @@
 # Semi-Supervised Visual Labeling Pipeline
 
-This repository contains a modular pipeline for generating and validating pseudo-labels on unlabeled image data using CLIP embeddings, YOLO detection, and manual curation. The goal is to reduce the burden of manual labeling in computer vision workflows by using similarity-based labeling and visual review.
+This repository contains a modular pipeline for generating and validating pseudo-labels on unlabeled image data using CLIP embeddings, YOLO detection, and manual curation. The goal is to reduce the burden of manual labeling in computer vision workflows by using similarity-based labeling and visual review. Note, this work is for images of objects not yet commonly seen by models, but those seen in manufacturing, such as tool identification, stock shape ID, and machine/process classifications. 
+
+Validation will be performed on standard benchmark datasets (e.g. Pascal VOC or COCO), using a subset of images held out from training. To simulate pseudo-labeling on unfamiliar objects, all previously learned weights for object categories will be frozen, minimizing inherited model knowledge and approximating the performance on truly unlabled or novel classes. 
+
+Evaluation is based on the following metrics:
+- mAP@IoU thresholds
+- Precision
+- Recall
+- F1-score
+
+This setup measures how effectively the pipeline proposes candidate objects, filters via visual review, and assigns meaningful labels, particularly in low-supervision or novel class scenarios. 
 
 ## Pipeline Overview
 
