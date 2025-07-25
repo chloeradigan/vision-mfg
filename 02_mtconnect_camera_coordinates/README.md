@@ -47,5 +47,6 @@ pip install -r requirements.txt
 - Robot movements are defined in XML programs (e.g., `camera_coordinate_test.xml`)
 
 ## Example
+(Camera not pictured)
  <img width="1414" height="870" alt="robot_capture_path" src="https://github.com/user-attachments/assets/651648ab-3236-465c-97ed-a5a900d9c188" />
 
