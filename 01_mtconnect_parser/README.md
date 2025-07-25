@@ -18,6 +18,4 @@ As anything, it's a work in progress.
 - node-red
 
 ### Run it
-```bash
-pip install -r requirements.txt
-python dashboard.py
+install node-red, import the JSON and deploy. 
