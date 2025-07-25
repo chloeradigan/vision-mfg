@@ -1,6 +1,6 @@
 # 01_mtconnect_parser
 
-**Project ammended from python to node-red for ease of use and encouragement of no more dashboard projects!
+**Project ammended from python to node-red for ease of use and encouragement of no more dashboard projects!**
 
 This micro-project connects to a live MTConnect data stream and builds a real-time dashboard that:
 - Parses and logs machine state data
