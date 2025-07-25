@@ -8,10 +8,10 @@ For a use-case demonstration of the standards harmonization between MTConnect an
 
 | Tool| Definition|
 |--------|--------|
-| 'MTConnect'| |
-| 'QIF'| |
-| 'Point Cloud'| |
-| 'Why You Should Care'| |
+| MTConnect| |
+| QIF| |
+| Point Cloud| |
+| Why You Should Care| |
 
 # HOW 
 
