@@ -51,7 +51,7 @@ graph TD
 | `crop_images.py` | Crop COCO format labeled images to reduce backround noise while training |
 | `yolo_candidate_crops.py` | Use pretrained YOLOv8 to crop candidate objects |
 | `extract_clip_features.py` | Feature extraction of objects produced from both labeled and unlabeled images|
-| `cosine_similariy.py` | Determines similarity between labeled images and unlabeled images to assign pseudo labels|
+| `cosine_similariy.py` | Determines feature similarity between labeled images and unlabeled images to assign pseudo labels|
 | `pseudo_labeling.py` | Assign pseudo-labels to new images using CLIP similarity |
 | `datavalidation.py` | GUI tool to manually approve or discard YOLO pseudo-labels |
 
