@@ -1,6 +1,6 @@
 # Robot-Captured Vision Dataset with MTConnect Sync
 
-This repository captures RGB camera frames from an Intel RealSense while logging robotic joint angles, tool position, and orientation from an MTConnect agent. The system is useful for building datasets for 3D reconstruction, calibration, and robotic simulation.
+This repository captures RGB camera frames from an Intel RealSense while logging robotic joint angles, tool position, and orientation from an MTConnect agent. This is a more unique use-case for MTConnect data, as the MTConnect stream is helping identify camera position in space while the camera is mounted to the robotic arm. The system is useful for building datasets for 3D reconstruction, calibration, and robotic simulation.
 
 ## Components
 - **robot_mtcpull.py**: Runs the capture loop and logs data.
