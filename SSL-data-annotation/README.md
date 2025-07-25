@@ -48,11 +48,12 @@ graph TD
 |--------|---------|
 | `extract_frames.py` | Extract frames evenly from a video for dataset generation |
 | `file_converter.py` | Convert `.heic` images to `.jpg` |
-| `crop_images.py` | Crop labeled YOLO objects from original images |
+| `crop_images.py` | Crop COCO format labeled images to reduce backround noise while training |
 | `yolo_candidate_crops.py` | Use pretrained YOLOv8 to crop candidate objects |
-| `datavalidation.py` | GUI tool to manually approve or discard YOLO pseudo-labels |
-| `extract_clip_features.py` | Extract CLIP features for candidate crops |
+| `extract_clip_features.py` | Feature extraction of objects produced from both labeled and unlabeled images|
+| `cosine_similariy.py` | Determines similarity between labeled images and unlabeled images to assign pseudo labels|
 | `pseudo_labeling.py` | Assign pseudo-labels to new images using CLIP similarity |
+| `datavalidation.py` | GUI tool to manually approve or discard YOLO pseudo-labels |
 
 ## Folder Structure (Expected)
 
@@ -84,43 +85,6 @@ Example packages used:
 - `torch`, `open_clip_torch`, `tqdm`
 - `opencv-python`, `Pillow`, `ultralytics`
 - `pillow-heif` (for `.heic` conversion)
-
-## How to Use
-
-1. **Extract frames (optional):**
-   ```bash
-   python extract_frames.py
-   ```
-
-2. **Convert `.heic` files:**
-   ```bash
-   python file_converter.py
-   ```
-
-3. **Crop YOLO-labeled objects:**
-   ```bash
-   python crop_images.py
-   ```
-
-4. **Run YOLOv8 on unlabeled images:**
-   ```bash
-   python yolo_candidate_crops.py
-   ```
-
-5. **Visually validate detections:**
-   ```bash
-   python datavalidation.py
-   ```
-
-6. **Extract CLIP features:**
-   ```bash
-   python extract_clip_features.py
-   ```
-
-7. **Generate pseudo-labels:**
-   ```bash
-   python pseudo_labeling.py
-   ```
 
 ## Author
 
