@@ -2,6 +2,9 @@
 
 **Project ammended from python to node-red for ease of use and encouragement of no more dashboard projects!**
 
+### Example output when connected to demo.mtconnect.org
+<img width="1664" height="800" alt="Screenshot 2025-07-25 105244" src="https://github.com/user-attachments/assets/dfb81184-225d-43b2-9172-f69ad989893d" />
+
 This micro-project connects to a live MTConnect data stream and builds a real-time dashboard that:
 - Parses and logs machine state data
 - Plots live time-series charts of selected numeric signals (e.g., spindle speed, axis positions)
@@ -19,6 +22,3 @@ As anything, it's a work in progress.
 
 ### Run it
 install node-red, import the JSON and deploy. 
-
-### Example output when connected to demo.mtconnect.org
-<img width="1664" height="800" alt="Screenshot 2025-07-25 105244" src="https://github.com/user-attachments/assets/dfb81184-225d-43b2-9172-f69ad989893d" />
